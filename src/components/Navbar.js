@@ -18,8 +18,13 @@ const NavWrapper = styled.nav`
 const NavbarSect = styled.section`
  display: flex;
  justify-content: space-between;
- margin: 30px;
- padding-bottom: 10px;
+ margin: 20px;
+ padding-top: 10px;
+ padding-bottom: 30px;
+
+ p {
+   cursor: pointer;
+ }
 `
 
 const Title = styled.h1`
