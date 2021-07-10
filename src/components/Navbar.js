@@ -13,7 +13,7 @@ const Navbar = () => {
   )
 }
 const NavWrapper = styled.nav`
-  border-bottom: 1px solid gray;
+  box-shadow: 0 2px 4px #F0F0F0;
 `
 const NavbarSect = styled.section`
  display: flex;
