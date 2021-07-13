@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-function Country() {
+function Countries() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [countries, setCountries] = useState([]);
@@ -31,7 +31,14 @@ function Country() {
       <ul>
         {countries.map(country => (
           <li key={country.id}>
-            {country.name} {country.price}
+            <h1>{country.name}</h1>
+              <ul>
+                <li>Population: {country.population}</li>
+                <li>Region: {country.region}</li>
+                <li>Capital: {country.capital}</li>
+           
+              </ul>
+            
           </li>
         ))}
       </ul>
@@ -39,5 +46,5 @@ function Country() {
   }
 }
 
-export default Country
+export default Countries
 

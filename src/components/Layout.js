@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { AiOutlineSearch } from 'react-icons/ai'
-import Country from './Country'
+import Countries from './Countries'
 
 const Layout = () => {
   return (
@@ -12,7 +12,7 @@ const Layout = () => {
         <input type="text" placeholder= 'Search for a country'/>
       </div>
     </LayoutWrap>
-    <Country/>
+    <Countries/>
     </>
   )
 }
