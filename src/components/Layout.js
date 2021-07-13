@@ -1,15 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 import { AiOutlineSearch } from 'react-icons/ai'
+import Country from './Country'
 
 const Layout = () => {
   return (
+    <>
     <LayoutWrap>
       <div className="input-wrapper">
         <button type='submit'><AiOutlineSearch className='search'/></button>
         <input type="text" placeholder= 'Search for a country'/>
       </div>
     </LayoutWrap>
+    <Country/>
+    </>
   )
 }
 
@@ -33,13 +37,15 @@ const LayoutWrap = styled.div`
    height: 50px;
    text-align: left;
    color: white;
+   width: 80%;
  }
 
  button {
-   background-color: pink;
    border: none;
    height: 50px;
     padding-left: 30px;
+    background-color: white;
+    box-shadow: 0 2px 4px #F0F0F0;
  }
 `
 export default Layout
