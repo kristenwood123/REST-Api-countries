@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
+import { useCallback } from 'react'
 
-function Countries() {
+const url = 'https://restcountries.eu/rest/v2/all'
+const AppContext = React.createContext()
+
+const AppProvider = ({children}) => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [countries, setCountries] = useState([]);
 
- const url = 'https://restcountries.eu/rest/v2/all'
 
   useEffect(() => {
     fetch(url)
@@ -27,24 +30,16 @@ function Countries() {
   } else if (!isLoaded) {
     return <div>Loading...</div>;
   } else {
-    return (
-      <ul>
-        {countries.map(country => (
-          <li key={country.id}>
-            <h1>{country.name}</h1>
-              <ul>
-                <li>Population: {country.population}</li>
-                <li>Region: {country.region}</li>
-                <li>Capital:  {country.capital}</li>
-           
-              </ul>
-            
-          </li>
-        ))}
-      </ul>
-    );
+    return <AppContext.Provider value ={{
+      error,
+      isLoading,
+      countries
+    }}>{children}</AppContext.Provider>
   }
+  export const useGlobalContext = () => {
+    return useContext(AppContext)
+  }
+
 }
 
-export default Countries
-
+export { AppContext, AppProvider }
