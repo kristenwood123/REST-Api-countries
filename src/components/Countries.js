@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useGlobalContext } from '../context'
+import Country from './Country'
 
-function Countries() {
+const Countries = () => {
   const {error, isLoaded, countries } = useGlobalContext()
 
   if (error) {
@@ -10,20 +11,13 @@ function Countries() {
     return <div>Loading...</div>;
   } else {
     return (
-      <ul>
-        {countries.map(country => (
-          <li key={country.id}>
-            <h1>{country.name}</h1>
-              <ul>
-                <li>Population: {country.population}</li>
-                <li>Region: {country.region}</li>
-                <li>Capital:  {country.capital}</li>
-           
-              </ul>
-            
-          </li>
-        ))}
-      </ul>
+      <section className='section'>
+        <div className="countries-center">
+          {countries.map((country) => {
+            return <Country key={country.id} {...country} />
+          })}
+        </div>
+      </section>
     );
   }
 }
