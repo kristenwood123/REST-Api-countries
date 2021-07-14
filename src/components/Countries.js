@@ -1,26 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import { useGlobalContext } from '../context'
 
 function Countries() {
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [countries, setCountries] = useState([]);
-
- const url = 'https://restcountries.eu/rest/v2/all'
-
-  useEffect(() => {
-    fetch(url)
-      .then(res => res.json())
-      .then(
-        (result) => {
-          setIsLoaded(true);
-          setCountries(result);
-        },
-        (error) => {
-          setIsLoaded(true);
-          setError(error);
-        }
-      )
-  }, [])
+  const {error, isLoaded, countries } = useGlobalContext()
 
   if (error) {
     return <div>Error: {error.message}</div>;
