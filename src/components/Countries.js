@@ -3,7 +3,7 @@ import { useGlobalContext } from '../context'
 import Country from './Country'
 
 const Countries = () => {
-  const {error, isLoaded, countries } = useGlobalContext()
+  const { error, isLoaded, countries } = useGlobalContext()
 
   if (error) {
     return <div>Error: {error.message}</div>;
