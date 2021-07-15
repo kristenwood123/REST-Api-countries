@@ -21,14 +21,18 @@ const Country = ({name, population, flag, region, capital}) => {
 }
 
 const Card = styled.article`
-  margin: 40px;
+  margin: 2rem;
+ 
   
   .country {
     background-color: white;
+    border-radius: 6px;
+     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   }
 
   .text-container {
     margin: 2rem;
+    padding-bottom: 2.5rem;
   }
 
   h1 {
@@ -37,6 +41,7 @@ const Card = styled.article`
 
   img {
     width: 100%;
+    border-radius: 6px 6px 0 0;
   }
 
   ul {
