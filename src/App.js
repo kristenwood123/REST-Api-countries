@@ -15,6 +15,7 @@ function App() {
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
     <>
+      <GlobalStyles/>
       <Navbar themeToggler={themeToggler} />
       <Layout/>
     </>

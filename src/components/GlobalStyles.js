@@ -5,6 +5,6 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
     font-family: Nunito Sans, sans-serif;
-    transition: all 0.50s linear;
+    transition: all 0.530s linear;
   }
   `
