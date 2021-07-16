@@ -2,17 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import { RiMoonLine } from 'react-icons/ri'
 
-const Navbar = () => {
-  const changeTheme = () => {
-    console.log('you clicked me!');
-  }
+const Navbar = ({themeToggler}) => {
 
 
   return (
     <NavWrapper>
       <NavbarSect>
         <Title>Where in the world?</Title>
-        <p onClick={changeTheme}><RiMoonLine/> Dark Mode</p>
+        <p onClick={themeToggler}><RiMoonLine/> Dark Mode</p>
       </NavbarSect>
     </NavWrapper>
   )
