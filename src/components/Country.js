@@ -10,7 +10,7 @@ const Country = ({name, population, flag, region, capital}) => {
         <div className="text-container">
           <h1>{name}</h1>
           <ul>
-            <li><b>Population:</b> {population}</li>
+            <li><b>Population:</b> {population.toLocaleString()}</li>
             <li><b>Region:</b> {region}</li>
             <li><b>Capital:</b> {capital}</li>
           </ul>
@@ -22,7 +22,6 @@ const Country = ({name, population, flag, region, capital}) => {
 
 const Card = styled.article`
   margin: 2rem;
- 
   
   .country {
     background-color: white;
