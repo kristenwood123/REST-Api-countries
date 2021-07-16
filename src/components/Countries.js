@@ -25,20 +25,11 @@ const Countries = () => {
 
 const Section = styled.section`
   width: 100%;
-  
-
-  @media screen and (min-width: 568px) {
-    width: 80%;
-  }
-
 
   .countries-center {
     display: grid;
-
-     @media screen and (min-width: 568px) {
-      max-width: 450px;
-      margin: 0 auto;
-    }
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: .5rem;
   }
 
 
