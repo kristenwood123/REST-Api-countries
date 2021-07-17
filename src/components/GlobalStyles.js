@@ -7,4 +7,9 @@ export const GlobalStyles = createGlobalStyle`
     font-family: Nunito Sans, sans-serif;
     transition: all 0.530s linear;
   }
+
+  .country {
+    background: ${({ theme }) => theme.cardBackground}
+  }
+
   `

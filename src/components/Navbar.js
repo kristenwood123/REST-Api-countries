@@ -4,7 +4,6 @@ import { RiMoonLine } from 'react-icons/ri'
 
 const Navbar = ({themeToggler}) => {
 
-
   return (
     <NavWrapper>
       <NavbarSect>

@@ -9,7 +9,7 @@ import { lightTheme, darkTheme } from "./components/Theme"
 function App() {
    const [theme, setTheme] = useState('light');
     const themeToggler = () => {
-      console.log('sa;lkjas;dlkj');
+
     theme === 'light' ? setTheme('dark') : setTheme('light')
 }
   return (

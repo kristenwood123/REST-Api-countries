@@ -24,9 +24,8 @@ const Card = styled.article`
   margin: 2rem;
   
   .country {
-    background-color: white;
     border-radius: 6px;
-     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   }
 
   .text-container {
