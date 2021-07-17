@@ -12,8 +12,10 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.cardBackground}
   }
 
-  nav {
-    box-shadow: ${({ theme }) => theme.boxShadow};
+  nav,
+  input,
+  button {
+    ${({ theme }) => theme.boxShadow};
   }
 
   `

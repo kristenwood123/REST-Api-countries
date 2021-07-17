@@ -32,7 +32,6 @@ const LayoutWrap = styled.div`
   }
 
  input {
-   box-shadow: 0 2px 4px #F0F0F0;
    border: none;
    height: 50px;
    text-align: left;
