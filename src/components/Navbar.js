@@ -5,17 +5,15 @@ import { RiMoonLine } from 'react-icons/ri'
 const Navbar = ({themeToggler}) => {
 
   return (
-    <NavWrapper>
+    <nav>
       <NavbarSect>
         <Title>Where in the world?</Title>
         <p onClick={themeToggler}><RiMoonLine/> Dark Mode</p>
       </NavbarSect>
-    </NavWrapper>
+    </nav>
   )
 }
-const NavWrapper = styled.nav`
-  box-shadow: 0 2px 4px #F0F0F0;
-`
+
 const NavbarSect = styled.section`
  display: flex;
  justify-content: space-between;
@@ -27,7 +25,6 @@ const NavbarSect = styled.section`
    cursor: pointer;
  }
 `
-
 const Title = styled.h1`
   font-size: 16px;
   font-weight: 800;
