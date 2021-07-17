@@ -1,4 +1,4 @@
-import { createGlobalStyle} from "styled-components"
+import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyles = createGlobalStyle`
   body {
@@ -9,13 +9,14 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .country {
-    background: ${({ theme }) => theme.cardBackground}
+    background: ${({ theme }) => theme.cardBackground};
   }
 
-  nav,
-  input,
-  button {
-    ${({ theme }) => theme.boxShadow};
+  input {
+    box-shadow: ${({ theme }) => theme.boxShadow};
   }
 
+  nav {
+    box-shadow: ${({ theme }) => theme.boxShadow};
+  }
   `

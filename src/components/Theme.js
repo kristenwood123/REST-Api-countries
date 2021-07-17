@@ -4,7 +4,7 @@ export const lightTheme = {
     text: 'hsl(200, 15%, 8%)',
     toggleBorder: '#FFF',
     background: '#363537',
-    boxShadow: 'box-shadow: 0 2px 4px #F0F0F0'
+    boxShadow: '0 2px 4px #F0F0F0'
 }
 export const darkTheme = {
     body: 'hsl(207, 26%, 17%)',

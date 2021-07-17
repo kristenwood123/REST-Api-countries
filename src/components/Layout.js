@@ -44,7 +44,6 @@ const LayoutWrap = styled.div`
    height: 50px;
     padding-left: 30px;
     background-color: white;
-    box-shadow: 0 2px 4px #F0F0F0;
  }
 `
 export default Layout
