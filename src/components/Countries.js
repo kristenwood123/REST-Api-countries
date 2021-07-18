@@ -30,6 +30,7 @@ const Section = styled.section`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: .5rem;
+    cursor: pointer;
   }
 
 

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Country = ({numericCode, name, population, flag, region, capital}) => {
 
   return (
-      <Link to={`countries/${name}`}>
+      // <Link>
         <Card key={numericCode}>
           <div className="country">
             <img src={flag} alt={name} />
@@ -19,7 +19,7 @@ const Country = ({numericCode, name, population, flag, region, capital}) => {
             </div>
           </div>
         </Card>
-      </Link>
+      // </Link>
   )
 }
 
