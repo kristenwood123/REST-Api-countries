@@ -15,7 +15,7 @@ const Countries = () => {
       <Section>
         <div className="countries-center">
           {countries.map((country) => {
-            return <Country key={country.id} {...country} />
+            return <Country key={country.numericCode} {...country} />
           })}
         </div>
       </Section>

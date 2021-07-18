@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { useCallback } from 'react'
+
 
 const url = 'https://restcountries.eu/rest/v2/all'
 const AppContext = React.createContext()
