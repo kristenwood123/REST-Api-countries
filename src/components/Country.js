@@ -1,12 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { useGlobalContext } from '../context'
 
 const Country = ({numericCode, name, population, flag, region, capital}) => {
-
+  const { getCountry } = useGlobalContext()
+  
   return (
-      <Link to='/details'>
-        <Card key={numericCode}>
+    <Card key={numericCode} onClick={() => getCountry(numericCode)}>
+        <Link to='/details'>
           <div className="country">
             <img src={flag} alt={name} />
             <div className="text-container">
@@ -18,8 +20,8 @@ const Country = ({numericCode, name, population, flag, region, capital}) => {
               </ul>
             </div>
           </div>
-        </Card>
       </Link>
+    </Card>
   )
 }
 

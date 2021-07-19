@@ -13,7 +13,6 @@ import DetailsPage from "./components/DetailsPage";
 function App() {
    const [theme, setTheme] = useState('light');
     const themeToggler = () => {
-
     theme === 'light' ? setTheme('dark') : setTheme('light')
 }
   return (
@@ -23,7 +22,8 @@ function App() {
 
         <Switch>
           <Route exact path='/' component={Layout}/>
-          <Route path='/details' component={DetailsPage}/>          </Switch>
+          <Route path='/details' component={DetailsPage}/>          
+        </Switch>
     </ThemeProvider>
   );
 }

@@ -8,6 +8,7 @@ const AppProvider = ({children}) => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [countries, setCountries] = useState([]);
+  const [details, setDetails] = useState([])
 
 
   useEffect(() => {
@@ -25,10 +26,19 @@ const AppProvider = ({children}) => {
       )
   }, [])
 
-    return <AppContext.Provider value ={{
+  // grabbing the country for the details page
+    const getCountry = (numericCode) => {
+      const detailCountry = countries.find(country => country.numericCode === numericCode)
+      console.log(detailCountry);
+      setDetails(detailCountry)
+    }
+
+    return <AppContext.Provider value={{
       error,
       isLoaded,
-      countries
+      countries,
+      details,
+      getCountry
     }}>{children}</AppContext.Provider>
   }
 
